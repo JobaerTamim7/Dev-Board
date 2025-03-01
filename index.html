@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles/output.css" />
     <link rel="stylesheet" href="styles/custom.css" />
   </head>
-  <body class="md:px-10 lg:px-20 md:py-4">
-    <header>
+  <body class="md:px-10 lg:px-20 md:py-4 font-pop">
+    <header class="mb-6">
       <nav
         class="flex justify-between px-3 md:rounded-2xl md:px-6 py-2 md:py-6 bg-white border-b-2 border-blue-100 shadow-sm shadow-blue-100 md:shadow-none md:border-none"
       >
@@ -23,13 +23,218 @@
             class="flex items-center space-x-3 px-5 py-3 bg-bg-primary rounded-full"
           >
             <img src="assets/checkbox.png" alt="" />
-            <h1 class="font-bold text-2xl">23</h1>
+            <h1 class="font-bold text-2xl" id="completed-task">23</h1>
           </div>
-          <div class="p-3 rounded-full bg-bg-primary">
+          <button
+            class="btn btn-accent p-3 rounded-full bg-bg-primary border-none"
+            id="theme-btn"
+          >
             <img src="assets/theme-btn.png" alt="" />
-          </div>
+          </button>
         </div>
       </nav>
     </header>
+    <main class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-3 gap-3">
+      <section
+        class="col-span-1 md:col-span-2 lg:col-span-3 bg-white rounded-2xl p-2 md:p-6 order-2 md:order-none"
+      >
+        <section
+          class="grid grid-cols-2 lg:grid-cols-4 gap-4 border-b border-dashed border-black/25 pb-10"
+        >
+          <div
+            class="col-span-1 card sm:flex-row lg:flex-col lg:items-center xl:flex-row bg-bg-primary p-3"
+          >
+            <figure class="md:max-w-[50%] lg:w-auto xl:max-w-[70%]">
+              <div class="p-4 rounded-full bg-white">
+                <img src="assets/checkbox.png" alt="" />
+              </div>
+            </figure>
+            <div class="card-body items-center">
+              <p class="font-medium text-center">Task Assigned </p>
+              <h1 class="card-title text-2xl" id="assigned-task-num">6</h1>
+            </div>
+          </div>
+          <div
+            class="col-span-1 card sm:flex-row lg:order-2 lg:flex-col lg:items-center xl:flex-row bg-bg-primary p-3"
+          >
+            <figure class="md:max-w-[50%] lg:w-auto xl:max-w-[70%]">
+              <div class="p-4 rounded-full bg-white">
+                <img src="assets/calender.png" alt="" />
+              </div>
+            </figure>
+            <div class="card-body">
+              <h1 class="card-title flex-col">
+                <p class="font-medium" id="day">Wed ,</p>
+                <p class="font-bold text-center" id="else-date">Jul 28 2025</p>
+              </h1>
+            </div>
+          </div>
+          <div
+            class="col-span-2 card flex-row lg:order-1 space-x-3 primary-grad p-3"
+          >
+            <figure>
+              <div class="rounded-xl border border-dashed border-white/50">
+                <img src="assets/board.png" alt="" />
+              </div>
+            </figure>
+            <div class="card-title text-white" id="discover-btn">
+              Discover Something New Today!
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6 gap-6"
+          id="activity-card-container"
+        >
+          <div
+            class="card items-start bg-bg-primary py-3 px-5 space-y-4 activity-card"
+          >
+            <h1 class="text-sm p-3 rounded-xl bg-white">ShopEase</h1>
+            <h1 class="card-title text-xl">Fix Mobile Button Issue</h1>
+            <h1
+              class="text-sm font-light bg-white p-3 rounded-xl h-14 line-clamp-2 mb-14 border-b-black/25"
+            >
+              Debug using Chrome DevTools, check for overlapping elements, and
+              ensure onClick works properly and ensure onClick works properly
+            </h1>
+            <div
+              class="flex justify-between items-center w-full pt-14 border-t-2 border-dashed border-black/50"
+            >
+              <div class="space-y-2">
+                <p class="text-xs">Deadline</p>
+                <p class="text-xs font-bold">21 March 2025</p>
+              </div>
+              <button class="btn btn-primary text-white">Completed</button>
+            </div>
+          </div>
+          <div
+            class="card items-start bg-bg-primary py-3 px-5 space-y-4 activity-card"
+          >
+            <h1 class="text-sm p-3 rounded-xl bg-white">CloudSync</h1>
+            <h1 class="card-title text-xl">Add Dark Mode</h1>
+            <h1
+              class="text-sm font-light bg-white p-3 rounded-xl h-14 line-clamp-2 mb-14 border-b-black/25"
+            >
+              Store the user's preference in localStorage, update CSS variables
+              dynamically, and apply a smooth transition effect.
+            </h1>
+            <div
+              class="flex justify-between items-center w-full pt-14 border-t-2 border-dashed border-black/50"
+            >
+              <div class="space-y-2">
+                <p class="text-xs">Deadline</p>
+                <p class="text-xs font-bold">21 March 2025</p>
+              </div>
+              <button class="btn btn-primary text-white">Completed</button>
+            </div>
+          </div>
+          <div
+            class="card items-start bg-bg-primary py-3 px-5 space-y-4 activity-card"
+          >
+            <h1 class="text-sm p-3 rounded-xl bg-white">SwiftPay</h1>
+            <h1 class="card-title text-xl">Optimize Home page </h1>
+            <h1
+              class="text-sm font-light bg-white p-3 rounded-xl h-14 line-clamp-2 mb-14 border-b-black/25"
+            >
+              Debug using Chrome DevTools, check for overlapping elements, and
+              ensure onClick works properly and ensure onClick works properly
+            </h1>
+            <div
+              class="flex justify-between items-center w-full pt-14 border-t-2 border-dashed border-black/50"
+            >
+              <div class="space-y-2">
+                <p class="text-xs">Deadline</p>
+                <p class="text-xs font-bold">21 March 2025</p>
+              </div>
+              <button class="btn btn-primary text-white">Completed</button>
+            </div>
+          </div>
+          <div
+            class="card items-start bg-bg-primary py-3 px-5 space-y-4 activity-card"
+          >
+            <h1 class="text-sm p-3 rounded-xl bg-white">Meta</h1>
+            <h1 class="card-title text-xl">Add new emoji 🤲</h1>
+            <h1
+              class="text-sm font-light bg-white p-3 rounded-xl h-14 line-clamp-2 mb-14 border-b-black/25"
+            >
+              Debug using Chrome DevTools, check for overlapping elements, and
+              ensure onClick works properly and ensure onClick works properly
+            </h1>
+            <div
+              class="flex justify-between items-center w-full pt-14 border-t-2 border-dashed border-black/50"
+            >
+              <div class="space-y-2">
+                <p class="text-xs">Deadline</p>
+                <p class="text-xs font-bold">21 March 2025</p>
+              </div>
+              <button class="btn btn-primary text-white">Completed</button>
+            </div>
+          </div>
+          <div
+            class="card items-start bg-bg-primary py-3 px-5 space-y-4 activity-card"
+          >
+            <h1 class="text-sm p-3 rounded-xl bg-white">Google LLC</h1>
+            <h1 class="card-title text-xl">Integrate OpenAI API</h1>
+            <h1
+              class="text-sm font-light bg-white p-3 rounded-xl h-14 line-clamp-2 mb-14 border-b-black/25"
+            >
+              Debug using Chrome DevTools, check for overlapping elements, and
+              ensure onClick works properly and ensure onClick works properly
+            </h1>
+            <div
+              class="flex justify-between items-center w-full pt-14 border-t-2 border-dashed border-black/50"
+            >
+              <div class="space-y-2">
+                <p class="text-xs">Deadline</p>
+                <p class="text-xs font-bold">21 March 2025</p>
+              </div>
+              <button class="btn btn-primary text-white">Completed</button>
+            </div>
+          </div>
+          <div
+            class="card items-start bg-bg-primary py-3 px-5 space-y-4 activity-card"
+          >
+            <h1 class="text-sm p-3 rounded-xl bg-white">Glassdoars</h1>
+            <h1 class="card-title text-xl">Improve Job searching</h1>
+            <h1
+              class="text-sm font-light bg-white p-3 rounded-xl h-14 line-clamp-2 mb-14 border-b-black/25"
+            >
+              Debug using Chrome DevTools, check for overlapping elements, and
+              ensure onClick works properly and ensure onClick works properly
+            </h1>
+            <div
+              class="flex justify-between items-center w-full pt-14 border-t-2 border-dashed border-black/50"
+            >
+              <div class="space-y-2">
+                <p class="text-xs">Deadline</p>
+                <p class="text-xs font-bold">21 March 2025</p>
+              </div>
+              <button class="btn btn-primary text-white">Completed</button>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section
+        class="col-span-1 flex flex-col bg-white rounded-2xl order-1 md:order-none p-5 space-y-8"
+      >
+        <div class="flex justify-center space-x-5">
+          <img src="assets/activity.png" alt="" />
+          <h1>Activity Log</h1>
+        </div>
+        <button
+          class="btn btn-primary max-w-[60%] text-white mx-auto text-nowrap"
+          id="clear-btn"
+        >
+          Clear History
+        </button>
+        <div
+          class="pt-14 border-t-2 border-dashed border-black/25 flex flex-col"
+          id="activity-log"
+        ></div>
+      </section>
+    </main>
+    <script src="scripts/test.js"></script>
+    <script src="scripts/utilities.js"></script>
   </body>
 </html>
