@@ -1,0 +1,13 @@
+input:disabled {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.primary-grad {
+  background: linear-gradient(
+    130.7deg,
+    rgb(55, 82, 253) 0.419%,
+    rgb(108, 127, 250) 52.66%,
+    rgb(155, 168, 248) 99.733%
+  );
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-bg-primary">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev-Board</title>
+    <link rel="stylesheet" href="styles/output.css" />
+    <link rel="stylesheet" href="styles/custom.css" />
+  </head>
+  <body class="md:px-14 lg:px-20 md:py-4">
+    <header>
+      <nav
+        class="flex items-center border-b-2 border-blue-600 md:border-none justify-between bg-white px-6 py-4 md:rounded-2xl mb-3"
+      >
+        <div class="flex items-center justify-around space-x-2">
+          <div>
+            <img
+              src="assets/logo.png"
+              alt="Logo image"
+              class="md:size-[80%] lg:size-full"
+            />
+          </div>
+          <h1 class="hidden md:block md:text-2xl lg:text-3xl">
+            Dev<span class="font-bold">Board</span>
+          </h1>
+        </div>
+        <div class="flex items-center space-x-10">
+          <div
+            class="flex items-center justify-center space-x-4.5 bg-bg-primary px-6 py-4 rounded-full"
+          >
+            <input
+              type="checkbox"
+              checked
+              disabled
+              class="checkbox checkbox-primary md:size-7"
+            />
+            <p class="text-xl md:text-2xl lg:text-3xl font-bold">23</p>
+          </div>
+          <div class="p-4 rounded-full bg-bg-primary">
+            <img src="assets/theme-btn.png" alt="Activity image" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+        <section
+          class="grid grid-cols-2 col-span-2 gap-2 bg-white px-4 py-3 rounded-2xl"
+        >
+          <div class="card sm:flex-row md:flex-col p-4 bg-bg-primary">
+            <figure class="sm:flex-1 md:flex-none">
+              <div class="p-3 rounded-full bg-white">
+                <img src="assets/checkbox.png" alt="" />
+              </div>
+            </figure>
+            <div class="card-body items-center">
+              <p class="md:text-lg">Task assigned</p>
+              <h1 class="card-title font-bold md:text-xl">05</h1>
+            </div>
+          </div>
+          <div
+            class="card sm:flex-row md:flex-col justify-around p-4 bg-bg-primary"
+          >
+            <figure class="sm:flex-1 md:flex-none">
+              <div class="p-3 rounded-full bg-white">
+                <img src="assets/calender.png" alt="" />
+              </div>
+            </figure>
+            <div class="card-body">
+              <div
+                class="card-title flex flex-col justify-center sm:items-start md:items-center md:text-xl"
+              >
+                <span class="font-normal">Wed , </span>
+                <span class="font-bold">Jul 28 2025</span>
+              </div>
+            </div>
+          </div>
+          <div class="card flex-row p-4 primary-grad col-span-2 space-x-3">
+            <figure class="border-1 border-dashed border-white/50">
+              <img src="assets/board.png" alt="" />
+            </figure>
+            <h1 class="card-title text-white text-xl md:text-[1.25rem]">
+              Discover Something New Today!
+            </h1>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
