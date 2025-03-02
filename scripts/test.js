@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.getElementById("discover-btn").addEventListener("click",
     function(){
-
-        window.location.href = "blog.html";
+        window.location.href = "../blog.html";
     }
 )

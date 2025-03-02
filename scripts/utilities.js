@@ -41,6 +41,7 @@ function bgColorChange(){
 
     const htmlElement = document.getElementsByTagName("html")[0];
     htmlElement.style.backgroundColor = `rgb(${red}, ${green} , ${blue})`
+    
 }
 function currentTimeGenerator(){
     const date = new Date();
