@@ -1,13 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-bg-primary">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/output.css" />
+    <link rel="stylesheet" href="../styles/custom.css" />
     <title>Dev FAQ</title>
   </head>
-  <body>
-    <header>
-      <h1>Hi my name is tamim</h1>
+  <body class="md:px-10 lg:px-20 md:py-4 font-pop">
+    <header class="mb-6">
+      <nav
+        class="flex justify-between px-3 md:rounded-2xl md:px-6 py-2 md:py-6 bg-white border-b-2 border-blue-100 shadow-sm shadow-blue-100 md:shadow-none md:border-none"
+      >
+        <div class="flex justify-center items-center space-x-4">
+          <img src="../assets/logo.png" alt="" />
+          <h1 class="hidden sm:block sm:text-2xl">
+            Dev<span class="font-bold">Board</span>
+          </h1>
+        </div>
+        <button
+          class="btn btn-primary text-white text-lg px-6 py-3"
+          id="back-btn"
+        >
+          Go Back
+        </button>
+      </nav>
     </header>
+    <main class="bg-white p-6">
+      <div
+        class="collapse collapse-arrow border-2 border-dashed mb-6 bg-bg-primary p-6"
+      >
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title font-semibold">
+          What are the different ways to select an element in the DOM?
+        </div>
+        <div class="collapse-content text-sm">
+          <ul class="list bg-base-100 rounded-box shadow-md p-4">
+            <li class="list-row mb-3 bg-bg-primary">
+              <div>
+                <div class="font-bold">By Tag Name</div>
+              </div>
+              <p class="list-col-wrap text-sm">
+                <code>
+                  const element = document.getElementsByTagName("h1");
+                </code>
+                <span class="block mt-3 italic"
+                  >This will return all the elements of h1 tags</span
+                >
+              </p>
+            </li>
+            <li class="list-row mb-3 bg-bg-primary">
+              <div>
+                <div class="font-bold">By Class Name</div>
+              </div>
+              <p class="list-col-wrap text-sm">
+                <code>
+                  const element = document.getElementsByClassName("btn");
+                </code>
+                <span class="block mt-3 italic"
+                  >This will return all the elements having btn class</span
+                >
+              </p>
+            </li>
+            <li class="list-row mb-3 bg-bg-primary">
+              <div>
+                <div class="font-bold">By ID Name</div>
+              </div>
+              <p class="list-col-wrap text-sm">
+                <code>
+                  const element = document.getElementById("my-btn");
+                </code>
+                <span class="block mt-3 italic"
+                  >This will return the element having the id my-btn. Normally
+                  we just have one unique id in the total html.</span
+                >
+              </p>
+            </li>
+            <li class="list-row mb-3 bg-bg-primary">
+              <div>
+                <div class="font-bold mb-3">With QuerySelector</div>
+                <p class="text-xs">
+                  This is a versatile one to get either the first or all the
+                  element by ID, class or tag
+                </p>
+              </div>
+              <p class="list-col-wrap text-sm">
+                <code>
+                  const element1 = document.querySelector(".my-class"); // to
+                  get first element having my-class <br />
+                  const elements2 = document.querySelectorAll(".my-class"); //
+                  to get all the elements having my-class <br />
+                  const element3 = document.querySelector("#myID"); // to get
+                  the element having myID <br />const element4 =
+                  document.querySelector("p"); // returns the first p tag
+                  element <br />
+                  const elements5 = document.querySelectorAll("p"); // returns
+                  all the p tag elements
+                </code>
+                <span class="block mt-3 italic"
+                  >pretty much versatile method for DOM</span
+                >
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow border-2 border-dashed mb-6 bg-bg-primary p-6"
+      >
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title font-semibold">
+          What is the difference between innerHTML, innerText, and textContent ?
+        </div>
+        <div class="collapse-content text-sm">
+          <div class="overflow-x-auto">
+            <table class="table table-zebra">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>innerHTML</th>
+                  <th>innerText</th>
+                  <th>textContent</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- row 1 -->
+                <tr>
+                  <th>1</th>
+                  <td>Have HTML</td>
+                  <td>Just text no HTML format</td>
+                  <td>Does not includes HTML format</td>
+                </tr>
+                <!-- row 2 -->
+                <tr>
+                  <th>2</th>
+                  <td>Includes the comments</td>
+                  <td>Does not includes comments</td>
+                  <td>Includes comments</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow border-2 border-dashed mb-6 bg-bg-primary p-6"
+      >
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title font-semibold">
+          What is event delegation in the DOM?
+        </div>
+        <div class="collapse-content text-sm">
+          When we have to do a repeatitive task on different elements of a same
+          parent element we have a brute force solution. We can add event
+          listener in all the elements and do the job. But it is not too much
+          efficient. To solve this repeatitive Task we may select the parent
+          element and then add the event listener in that element. Then with the
+          help of conditionals we can simply perform the task.
+          <br />
+          Also with the brute force method we cannot add event listener in the
+          newly added elements. But with 2nd method which is also known as event
+          delegation we can do the same task with any children element of the
+          parent regarless they are old or new.
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow border-2 border-dashed mb-6 bg-bg-primary p-6"
+      >
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title font-semibold">
+          What is event bubbling in the DOM?
+        </div>
+        <div class="collapse-content text-sm">
+          Event bubbling is the process where the parent element event triggers
+          upon triggering the child element. This flow starts from children and
+          moves up to window ( the root of the DOM ).
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow border-2 border-dashed mb-6 bg-bg-primary p-6"
+      >
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title font-semibold">
+          How do you create, add, and remove elements using JavaScript?
+        </div>
+        <div class="collapse-content text-sm">
+          <ul class="p-4 bg-base-200 rounded-lg">
+            <li>
+              <details>
+                <summary>Create element</summary>
+                <p>
+                  <code
+                    >const element = document.createElement("p"); // creates a
+                    new element</code
+                  >
+                </p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Add element</summary>
+                <p>
+                  <code>parentElement.appendChild(childElement)</code>
+                </p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Remove element</summary>
+                <p>
+                  <code>parentElement.removeChild(childElement); </code>
+                </p>
+                <p>
+                  <code
+                    >parentElement.innerHTML = "" // this will delete all the
+                    child elements (Actually it replaces the child element with
+                    nothing. )</code
+                  >
+                </p>
+              </details>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="../scripts/blog.js"></script>
   </body>
 </html>
