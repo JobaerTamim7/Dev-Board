@@ -34,7 +34,7 @@ function activityLogDeleter(){
 
 function bgColorChange(){
     const max = 255;
-    const min = 230;
+    const min = 200;
     const red = Math.floor(Math.random()*(max-min)) + min;
     const green = Math.floor(Math.random()*(max-min)) + min;
     const blue = Math.floor(Math.random()*(max-min)) + min;
